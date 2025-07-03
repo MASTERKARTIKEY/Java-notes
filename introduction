@@ -1,0 +1,115 @@
+☕ JVM: Java Virtual Machine
+What it does: The JVM is like a virtual computer that runs your Java programs.
+
+It converts compiled Java bytecode (.class files) into machine code that your hardware can understand.
+
+It handles:
+
+Memory management
+
+Garbage collection
+
+Threading
+
+Security
+
+➡️ Think of JVM as the engine that actually executes your Java code.
+
+📦 JRE: Java Runtime Environment
+What it includes: The JRE contains the JVM plus core libraries and class files needed to run Java applications.
+
+It’s what you install if you want to run Java apps, but not develop them.
+
+➡️ If JVM is the engine, JRE is the whole car needed to drive a Java application.
+
+🛠️ JDK: Java Development Kit
+What it includes: The JDK is a complete toolkit for Java developers. It contains:
+
+The JRE (so it includes JVM and core libraries)
+
+Compiler (javac)
+
+Debugger
+
+JavaDoc
+
+Other development tools
+
+➡️ It's everything you need to create and build Java programs.
+
+Component	  Purpose	                             Contains
+JVM	      Executes Java bytecode	                 Core part of JRE
+JRE	      Runs Java apps	                         JVM + Standard Libraries
+JDK	      Develops Java programs	                 JRE + Tools & Compiler
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+🧠 Memory Management 
+
+Java automatically handles memory for your program so you don’t have to manually manage it like in C or C++.
+
+When you create variables or objects, Java stores them in memory.
+
+It divides memory mainly into:
+
+Stack – for simple variables and function calls.
+
+Heap – for objects and dynamic data.
+
+➡️ Think of Java memory as a smart storage shelf—Java puts things where they belong and keeps track so you don’t lose them.
+
+🗑️ Garbage Collection
+When your program no longer needs an object, Java cleans it up for you.
+
+The Garbage Collector finds unused objects and removes them from memory.
+
+This prevents memory leaks and keeps your program running smoothly.
+
+➡️ Imagine a robotic cleaner inside your code that tosses out unused stuff automatically!
+
+🧵 Threading
+Java can run multiple tasks at the same time using threads.
+
+Each thread is like a worker doing a job.
+
+Multithreading lets your app be fast and responsive (e.g., loading images while playing music).
+
+➡️ Think of threading like a kitchen where multiple chefs (threads) are cooking different parts of the meal—all together!
+
+🔐 Security
+Java has built-in tools to protect your code from bad behavior or attacks.
+
+Sandboxing: Keeps code running in a safe environment.
+
+ClassLoader: Controls which classes are allowed to load.
+
+Bytecode verification: Makes sure no suspicious instructions sneak into your program.
+
+➡️ Java’s like a guarded castle—only trusted code gets inside, and shady behavior gets blocked.
+\\\\||||||||||||||||||||||||||\\\\\\\\\\\\\\\\||||||||||||||||||||||||||||||||||||||||||||||||||||||||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\||||||||||||||||||||||\||||
+
+
+
+🏃 Behind the Scenes: Java Execution Flow
+Your Java code goes through several steps before it finally runs on your machine:
+
+You write the code → in a .java file (like Game.java)
+
+Compiler (javac) turns it into bytecode → creates a .class file — this is not human-readable but not quite machine language either.
+
+JVM (Java Virtual Machine) executes the bytecode → The JVM runs inside your computer, interpreting or just-in-time compiling the bytecode into machine code that your CPU understands.
+
+🧭 Where Does It Actually Run?
+Layer	                 Description
+Source Code	       .java files you write
+Bytecode	         .class files compiled by javac
+JVM	Runs           the bytecode on your hardware
+OS & CPU	         JVM communicates with your operating system and processor to run instructions
+So your code ultimately runs on your physical computer (Windows, Linux, macOS, etc.), but it’s processed through the JVM—which acts as a translator.
+
+⚙️ Why This Setup Rocks
+Portability: Your code can run on any device with a JVM. "Write once, run anywhere" ✅
+
+Security: The JVM acts as a sandbox, keeping your app isolated and safe.
+
+Optimization: Java can use Just-In-Time (JIT) compilation to speed things up at runtime.
