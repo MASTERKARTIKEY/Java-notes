@@ -113,3 +113,63 @@ Portability: Your code can run on any device with a JVM. "Write once, run anywhe
 Security: The JVM acts as a sandbox, keeping your app isolated and safe.
 
 Optimization: Java can use Just-In-Time (JIT) compilation to speed things up at runtime.
+
+🧵 What Is Multithreading?
+Multithreading means running multiple tasks at the same time within a single program.
+
+Each task is called a thread.
+
+Java lets you create multiple threads that run concurrently, which means more efficient and faster programs.
+
+➡️ Imagine you’re cooking dinner:
+
+One thread boils water 🫖
+
+Another chops vegetables 🥕
+
+Another sets the table 🍽️ All these tasks happen side by side!
+
+🔧 Why Use Multithreading?
+🚀 Speed: Your app can do many things at once.
+
+🎮 Responsiveness: Games or UI apps don’t freeze during heavy tasks.
+
+📡 Efficiency: Great for downloads, data processing, or network calls.
+
+🛠️ How It Works in Java
+You can create threads using:
+
+✅ Option 1: Extending the Thread class
+java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start();  // starts the thread
+    }
+}
+✅ Option 2: Implementing Runnable interface
+java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new MyRunnable());
+        t1.start();  // starts the thread
+    }
+}
+⚙️ Things to Know
+The method run() holds the task to execute.
+
+Use start() to begin the thread. Calling run() directly won't start it concurrently.
+
+You can create multiple threads for different tasks and run them at once!
